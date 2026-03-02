@@ -80,7 +80,7 @@ To apply survival modeling techniques to support operations data in order to:
 | `sla_breached`    | Boolean SLA violation flag                 |
 
 # Analytical Framework
-# 1️⃣ Time-to-Event Modeling
+## 1️⃣ Time-to-Event Modeling
 
 Resolution treated as:
 
@@ -101,14 +101,14 @@ Why this matters:
 
 Ignoring open tickets underestimates resolution time and misrepresents performance.
 
-# 2️⃣ Kaplan-Meier Survival Estimation
+## 2️⃣ Kaplan-Meier Survival Estimation
 
 We estimate:
 
                                           S(t)=P(T>t)
 
 Probability a ticket remains open beyond time t.
- Kaplan-Meier estimation is ideal because it:
+ **Kaplan-Meier estimation is ideal because it:**
 
 Ticket resolution is a time-to-event process with incomplete observations (open tickets).
 
@@ -126,7 +126,7 @@ Ticket resolution is a time-to-event process with incomplete observations (open 
 
 Using Kaplan-Meier prevents biased performance metrics and delivers operationally reliable insights.
 
-# 3️⃣ Multi-Tier Survival Curve Comparison
+## 3️⃣ Multi-Tier Survival Curve Comparison
 
 Separate survival curves plotted for each tier to assess:
 
@@ -144,7 +144,7 @@ Plateau → Long-tail backlog
 
 Curve overlap → Performance similarity
 
-# 4️⃣ Statistical Validation (Log-Rank Test)
+## 4️⃣ Statistical Validation (Log-Rank Test)
 
 Hypothesis:
 
@@ -163,7 +163,7 @@ Operational meaning:
 
 Standardization across tiers appears consistent.
 
-# 5️⃣ SLA Risk Modeling
+## 5️⃣ SLA Risk Modeling
 
 SLA threshold: 5 days
 
@@ -221,7 +221,7 @@ Plateau at ~25%:
 
 This plateau represents operational inefficiency or complexity clustering.
 
-# Visual Outputs Section
+# Visual Outputs 
 
 The analysis generates:
 
@@ -256,7 +256,6 @@ Future modeling could incorporate Cox Regression to analyze influencing factors.
 # 💡 Business Impact Quantification
 
 If SLA breach rate reduces from 45% → 30%:
-
  - Faster ticket throughput
 
  - Reduced escalation load
