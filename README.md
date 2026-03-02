@@ -9,15 +9,15 @@ This project applies **Survival Analysis** to evaluate support ticket resolution
 
 Instead of using traditional averages (which ignore open tickets and create bias), this analysis:
 
-Correctly incorporates **censored (open) tickets**
+- Correctly incorporates **censored (open) tickets**
 
-Models resolution as a **time-to-event process**
+- Models resolution as a **time-to-event process**
 
-Compares tiers using **statistical hypothesis testing**
+- Compares tiers using **statistical hypothesis testing**
 
-Quantifies **SLA risk exposure**
+- Quantifies **SLA risk exposure**
 
-Provides **operational recommendations**
+- Provides **operational recommendations**
 
 # Core Insight
 
@@ -49,27 +49,27 @@ Cannot statistically compare teams
 
 To apply survival modeling techniques to support operations data in order to:
 
-Quantify resolution probability over time
+- Quantify resolution probability over time
 
-Statistically compare performance across support tiers
+- Statistically compare performance across support tiers
 
-Measure SLA breach risk exposure
+- Measure SLA breach risk exposure
 
-Evaluate operational standardization effectiveness
+- Evaluate operational standardization effectiveness
 
-Provide data-driven recommendations to reduce backlog and improve service efficiency
+- Provide data-driven recommendations to reduce backlog and improve service efficiency
 
 # 📊Dataset Summary
 
-🎫 250 Support Tickets
+- 🎫 250 Support Tickets
 
-🏷️ Tier 1, Tier 2, Tier 3
+- 🏷️ Tier 1, Tier 2, Tier 3
 
-📅 Created Timestamp
+- 📅 Created Timestamp
 
-📅 Closed Timestamp
+- 📅 Closed Timestamp
 
-🔁 Open / Resolved Status
+- 🔁 Open / Resolved Status
 
 # Derived Analytical Variables
 
@@ -108,21 +108,21 @@ We estimate:
                                           S(t)=P(T>t)
 
 Probability a ticket remains open beyond time t.
-
-**Why Kaplan-Meier?**
+ Kaplan-Meier estimation is ideal because it:
 
 Ticket resolution is a time-to-event process with incomplete observations (open tickets).
-Kaplan-Meier estimation is ideal because it:
 
-Accurately models time-to-resolution without discarding open cases
+**Kaplan-Meier estimation is ideal because it:**
 
-Correctly accounts for censored observations
+- Accurately models time-to-resolution without discarding open cases
 
-Avoids distributional assumptions
+- Correctly accounts for censored observations
 
-Provides survival probabilities at any time point
+- Avoids distributional assumptions
 
-Enables statistically valid comparison across support tiers
+- Provides survival probabilities at any time point
+
+- Enables statistically valid comparison across support tiers
 
 Using Kaplan-Meier prevents biased performance metrics and delivers operationally reliable insights.
 
@@ -221,6 +221,29 @@ Plateau at ~25%:
 
 This plateau represents operational inefficiency or complexity clustering.
 
+# Visual Outputs Section
+
+```
+# 📦 Installation
+
+##  Clone the Repository
+
+```bash
+git clone https://github.com/prashanthb0904-eng/Ticket-Resolution-Time-Analysis.git
+cd Ticket-Resolution-Time-Analysis
+```
+# Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+# Run the Notebook
+
+```
+jupyter notebook "Ticket Resolution Time Analysis.ipynb"
+
+```
+
 # Statistical Depth
 
 **Confidence Intervals**
@@ -263,7 +286,7 @@ Even a 10% reduction in breach rate significantly reduces long-tail backlog.
 4️⃣ Tier-specific performance dashboards
 5️⃣ Monitor survival probability at Day 5 KPI
 
-# conclusion
+# Conclusion
 
 This project demonstrates how survival analysis can transform traditional ticket resolution reporting into statistically rigorous operational intelligence.
 
@@ -314,11 +337,6 @@ lifelines>=0.27.0
 # Notebook Environment
 jupyter>=1.0.0
 ipython>=8.0.0
-```
-# Installation
-
-```
-pip install -r requirements.txt
 ```
 
 # 📂 Project Structure
