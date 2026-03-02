@@ -37,13 +37,13 @@ This project demonstrates advanced analytical thinking expected from a Data Anal
 
 **Traditional analysis methods:**
 
-Ignore open tickets
+- Ignore open tickets
 
-Use biased averages
+- Use biased averages
 
-Fail to model time uncertainty
+- Fail to model time uncertainty
 
-Cannot statistically compare teams
+- Cannot statistically compare teams
 
 **Strategic Objective:**
 
@@ -80,7 +80,7 @@ To apply survival modeling techniques to support operations data in order to:
 | `sla_breached`    | Boolean SLA violation flag                 |
 
 # Analytical Framework
-1️⃣ **Time-to-Event Modeling**
+# 1️⃣ Time-to-Event Modeling
 
 Resolution treated as:
 
@@ -208,7 +208,7 @@ While tiers appear similar statistically, SLA breach rate (~45%) indicates syste
 The issue is not tier inconsistency —
 the issue is overall SLA compliance weakness.
 
-# 📉 Survival Curve Business Interpretation
+# 📉 Survival Curve Interpretation
 
 Early Sharp Drop:
 → Many tickets resolved quickly.
@@ -223,26 +223,15 @@ This plateau represents operational inefficiency or complexity clustering.
 
 # Visual Outputs Section
 
-```
-# 📦 Installation
+The analysis generates:
 
-##  Clone the Repository
+- Overall Kaplan-Meier survival curve
 
-```bash
-git clone https://github.com/prashanthb0904-eng/Ticket-Resolution-Time-Analysis.git
-cd Ticket-Resolution-Time-Analysis
-```
-# Install Dependencies
+- Tier-wise survival comparison curves
 
-```
-pip install -r requirements.txt
-```
-# Run the Notebook
+- SLA breach distribution summary
 
-```
-jupyter notebook "Ticket Resolution Time Analysis.ipynb"
-
-```
+These visualizations highlight resolution velocity, backlog persistence, and cross-tier performance patterns.
 
 # Statistical Depth
 
@@ -256,11 +245,11 @@ Tier curves overlap within confidence bands → reinforces statistical similarit
 
 **Limitations**
 
-No covariates modeled (priority, category, severity)
+- No covariates modeled (priority, category, severity)
 
-Static SLA threshold
+- Static SLA threshold
 
-Limited dataset size (250 tickets)
+- Limited dataset size (250 tickets)
 
 Future modeling could incorporate Cox Regression to analyze influencing factors.
 
@@ -268,23 +257,23 @@ Future modeling could incorporate Cox Regression to analyze influencing factors.
 
 If SLA breach rate reduces from 45% → 30%:
 
- Faster ticket throughput
+ - Faster ticket throughput
 
- Reduced escalation load
+ - Reduced escalation load
 
- Improved customer satisfaction
+ - Improved customer satisfaction
 
- Lower operational overhead
+ - Lower operational overhead
 
 Even a 10% reduction in breach rate significantly reduces long-tail backlog.
 
 # 🎯 Operational Recommendations
 
-1️⃣ Introduce early-warning alerts at Day 4
-2️⃣ Weekly aging-ticket review
-3️⃣ Backlog root cause clustering
-4️⃣ Tier-specific performance dashboards
-5️⃣ Monitor survival probability at Day 5 KPI
+  -  Introduce early-warning alerts at Day 4
+  - Weekly aging-ticket review
+  - Backlog root cause clustering
+  - Tier-specific performance dashboards
+  - Monitor survival probability at Day 5 KPI
 
 # Conclusion
 
@@ -292,13 +281,13 @@ This project demonstrates how survival analysis can transform traditional ticket
 
 By modeling ticket resolution as a time-to-event process:
 
- Open tickets were correctly treated as censored observations
+ - Open tickets were correctly treated as censored observations
 
- Resolution probability was measured over time
+ - Resolution probability was measured over time
 
- Support tiers were statistically compared
+ - Support tiers were statistically compared
 
- SLA risk exposure was quantified
+ - SLA risk exposure was quantified
 
 Although tier performance appears statistically consistent, the overall SLA breach rate highlights systemic efficiency challenges.
 
@@ -308,17 +297,17 @@ This reflects the analytical depth, business interpretation, and structured thin
 
 # Tech Stack
 
-Python
+- Python
 
-Pandas
+- Pandas
 
-NumPy
+- NumPy
 
-Matplotlib
+- Matplotlib
 
-Lifelines (Survival Analysis)
+- Lifelines (Survival Analysis)
 
-Jupyter Notebook
+- Jupyter Notebook
 
 # Dependencies
 
@@ -337,6 +326,25 @@ lifelines>=0.27.0
 # Notebook Environment
 jupyter>=1.0.0
 ipython>=8.0.0
+```
+# Installation
+
+**Clone the Repository**
+
+```
+git clone https://github.com/prashanthb0904-eng/Ticket-Resolution-Time-Analysis.git
+cd Ticket-Resolution-Time-Analysis
+```
+**Install Dependencies**
+
+```
+pip install -r requirements.txt
+```
+
+**Run the Notebook**
+
+```
+jupyter notebook "Ticket Resolution Time Analysis.ipynb"
 ```
 
 # 📂 Project Structure
