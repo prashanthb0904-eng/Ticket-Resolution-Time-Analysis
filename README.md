@@ -10,13 +10,9 @@ This project applies **Survival Analysis** to evaluate support ticket resolution
 Instead of using traditional averages (which ignore open tickets and create bias), this analysis:
 
 - Correctly incorporates **censored (open) tickets**
-
 - Models resolution as a **time-to-event process**
-
 - Compares tiers using **statistical hypothesis testing**
-
 - Quantifies **SLA risk exposure**
-
 - Provides **operational recommendations**
 
 # Core Insight
@@ -38,11 +34,8 @@ This project demonstrates advanced analytical thinking expected from a Data Anal
 **Traditional analysis methods:**
 
 - Ignore open tickets
-
 - Use biased averages
-
 - Fail to model time uncertainty
-
 - Cannot statistically compare teams
 
 **Strategic Objective:**
@@ -50,13 +43,9 @@ This project demonstrates advanced analytical thinking expected from a Data Anal
 To apply survival modeling techniques to support operations data in order to:
 
 - Quantify resolution probability over time
-
 - Statistically compare performance across support tiers
-
 - Measure SLA breach risk exposure
-
 - Evaluate operational standardization effectiveness
-
 - Provide data-driven recommendations to reduce backlog and improve service efficiency
 
 # 📊Dataset Summary
@@ -112,16 +101,10 @@ Probability a ticket remains open beyond time t.
 
 Ticket resolution is a time-to-event process with incomplete observations (open tickets).
 
-**Kaplan-Meier estimation is ideal because it:**
-
 - Accurately models time-to-resolution without discarding open cases
-
 - Correctly accounts for censored observations
-
 - Avoids distributional assumptions
-
 - Provides survival probabilities at any time point
-
 - Enables statistically valid comparison across support tiers
 
 Using Kaplan-Meier prevents biased performance metrics and delivers operationally reliable insights.
@@ -130,11 +113,9 @@ Using Kaplan-Meier prevents biased performance metrics and delivers operationall
 
 Separate survival curves plotted for each tier to assess:
 
-Resolution velocity
-
-Backlog persistence
-
-Operational consistency
+- Resolution velocity
+- Backlog persistence
+- Operational consistency
 
 Interpretation logic:
 
@@ -226,9 +207,7 @@ This plateau represents operational inefficiency or complexity clustering.
 The analysis generates:
 
 - Overall Kaplan-Meier survival curve
-
 - Tier-wise survival comparison curves
-
 - SLA breach distribution summary
 
 These visualizations highlight resolution velocity, backlog persistence, and cross-tier performance patterns.
@@ -246,9 +225,7 @@ Tier curves overlap within confidence bands → reinforces statistical similarit
 **Limitations**
 
 - No covariates modeled (priority, category, severity)
-
 - Static SLA threshold
-
 - Limited dataset size (250 tickets)
 
 Future modeling could incorporate Cox Regression to analyze influencing factors.
@@ -256,23 +233,21 @@ Future modeling could incorporate Cox Regression to analyze influencing factors.
 # 💡 Business Impact Quantification
 
 If SLA breach rate reduces from 45% → 30%:
+
  - Faster ticket throughput
-
  - Reduced escalation load
-
  - Improved customer satisfaction
-
  - Lower operational overhead
 
 Even a 10% reduction in breach rate significantly reduces long-tail backlog.
 
 # 🎯 Operational Recommendations
 
-  -  Introduce early-warning alerts at Day 4
-  - Weekly aging-ticket review
-  - Backlog root cause clustering
-  - Tier-specific performance dashboards
-  - Monitor survival probability at Day 5 KPI
+ -  Introduce early-warning alerts at Day 4
+ - Weekly aging-ticket review
+ - Backlog root cause clustering
+ - Tier-specific performance dashboards
+ - Monitor survival probability at Day 5 KPI
 
 # Conclusion
 
@@ -281,11 +256,8 @@ This project demonstrates how survival analysis can transform traditional ticket
 By modeling ticket resolution as a time-to-event process:
 
  - Open tickets were correctly treated as censored observations
-
  - Resolution probability was measured over time
-
  - Support tiers were statistically compared
-
  - SLA risk exposure was quantified
 
 Although tier performance appears statistically consistent, the overall SLA breach rate highlights systemic efficiency challenges.
@@ -297,15 +269,10 @@ This reflects the analytical depth, business interpretation, and structured thin
 # Tech Stack
 
 - Python
-
 - Pandas
-
 - NumPy
-
 - Matplotlib
-
 - Lifelines (Survival Analysis)
-
 - Jupyter Notebook
 
 # Dependencies
