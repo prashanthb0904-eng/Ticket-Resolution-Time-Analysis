@@ -25,11 +25,11 @@ This project demonstrates advanced analytical thinking expected from a Data Anal
 
 **Support organizations face three recurring challenges:**
 
-**1)** 📉 Rising SLA breach rates
+**1)** Rising SLA breach rates
 
-**2)** ⏳ Long-tail unresolved backlog
+**2)** Long-tail unresolved backlog
 
-**3)** 📊 Inconsistent tier performance
+**3)** Inconsistent tier performance
 
 **Traditional analysis methods:**
 
@@ -48,17 +48,17 @@ To apply survival modeling techniques to support operations data in order to:
 - Evaluate operational standardization effectiveness
 - Provide data-driven recommendations to reduce backlog and improve service efficiency
 
-# 📊Dataset Summary
+# Dataset Summary
 
-- 🎫 250 Support Tickets
+-  250 Support Tickets
 
-- 🏷️ Tier 1, Tier 2, Tier 3
+-  Tier 1, Tier 2, Tier 3
 
-- 📅 Created Timestamp
+-  Created Timestamp
 
-- 📅 Closed Timestamp
+-  Closed Timestamp
 
-- 🔁 Open / Resolved Status
+-  Open / Resolved Status
 
 # Derived Analytical Variables
 
@@ -69,7 +69,7 @@ To apply survival modeling techniques to support operations data in order to:
 | `sla_breached`    | Boolean SLA violation flag                 |
 
 # Analytical Framework
-## 1️⃣ Time-to-Event Modeling
+## 1. Time-to-Event Modeling
 
 Resolution treated as:
 
@@ -90,7 +90,7 @@ Why this matters:
 
 Ignoring open tickets underestimates resolution time and misrepresents performance.
 
-## 2️⃣ Kaplan-Meier Survival Estimation
+## 2️. Kaplan-Meier Survival Estimation
 
 We estimate:
 
@@ -109,7 +109,7 @@ Ticket resolution is a time-to-event process with incomplete observations (open 
 
 Using Kaplan-Meier prevents biased performance metrics and delivers operationally reliable insights.
 
-## 3️⃣ Multi-Tier Survival Curve Comparison
+## 3️. Multi-Tier Survival Curve Comparison
 
 Separate survival curves plotted for each tier to assess:
 
@@ -125,7 +125,7 @@ Plateau → Long-tail backlog
 
 Curve overlap → Performance similarity
 
-## 4️⃣ Statistical Validation (Log-Rank Test)
+## 4️. Statistical Validation (Log-Rank Test)
 
 Hypothesis:
 
@@ -144,7 +144,7 @@ Operational meaning:
 
 Standardization across tiers appears consistent.
 
-## 5️⃣ SLA Risk Modeling
+## 5️. SLA Risk Modeling
 
 SLA threshold: 5 days
 
@@ -155,7 +155,7 @@ SLA threshold: 5 days
 | 40–60%       | Needs Improvement  |
 | > 60%        | Critical           |
 
-# 📈 Results & Business Insights
+# Results & Business Insights
  
  **Resolution Behavior**
 
@@ -174,7 +174,7 @@ but long-tail tickets inflate average resolution time dramatically.
 
 This indicates backlog concentration in complex cases.
 
-# 📊 Tier Performance Comparison
+# Tier Performance Comparison
 
 | Tier   | Resolved % | SLA Breach % | Interpretation            |
 | ------ | ---------- | ------------ | ------------------------- |
@@ -189,7 +189,7 @@ While tiers appear similar statistically, SLA breach rate (~45%) indicates syste
 The issue is not tier inconsistency —
 the issue is overall SLA compliance weakness.
 
-# 📉 Survival Curve Interpretation
+# Survival Curve Interpretation
 
 Early Sharp Drop:
 → Many tickets resolved quickly.
@@ -230,7 +230,7 @@ Tier curves overlap within confidence bands → reinforces statistical similarit
 
 Future modeling could incorporate Cox Regression to analyze influencing factors.
 
-# 💡 Business Impact Quantification
+#  Business Impact Quantification
 
 If SLA breach rate reduces from 45% → 30%:
 
@@ -241,7 +241,7 @@ If SLA breach rate reduces from 45% → 30%:
 
 Even a 10% reduction in breach rate significantly reduces long-tail backlog.
 
-# 🎯 Operational Recommendations
+#  Operational Recommendations
 
  -  Introduce early-warning alerts at Day 4
  - Weekly aging-ticket review
@@ -313,7 +313,7 @@ pip install -r requirements.txt
 jupyter notebook "Ticket Resolution Time Analysis.ipynb"
 ```
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 Ticket-Resolution-Time-Analysis/
