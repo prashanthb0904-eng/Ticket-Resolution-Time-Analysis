@@ -321,7 +321,6 @@ Ticket-Resolution-Time-Analysis/
 ├── Ticket Resolution Time Analysis.ipynb
 ├── tickets_250.csv
 ├── README.md
-├── requirements.txt
 ```
 
 
